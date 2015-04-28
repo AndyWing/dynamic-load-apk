@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">PluginChild</string>
+    <string name="title_activity_target">TargetActivity</string>
+
+    <string name="hello_in_plugin">I am from plugin!</string>
+    <string name="hello_in_plugin_sec">I am from plugin in second activity!</string>
+    <string name="plugin_custom_view">I am in plugin custom view!</string>
+    <string name="plugin_custom_view_sec">I am in plugin custom view in second activity!</string>
+    <string name="plugin_custom_view_host">click me back to host!</string>
+    <string name="set_in_plugin">I am in set it in plugin!</string>
+    <string name="invoke_it">Click me to invoke parent track</string>
+</resources>

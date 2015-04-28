@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DynamicLoadApk.iml" filepath="$PROJECT_DIR$/DynamicLoadApk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_dynamic_load/lib_dynamic_load.iml" filepath="$PROJECT_DIR$/lib_dynamic_load/lib_dynamic_load.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample_child/sample_child.iml" filepath="$PROJECT_DIR$/sample_child/sample_child.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample_parent/sample_parent.iml" filepath="$PROJECT_DIR$/sample_parent/sample_parent.iml" />
+    </modules>
+  </component>
+</project>
