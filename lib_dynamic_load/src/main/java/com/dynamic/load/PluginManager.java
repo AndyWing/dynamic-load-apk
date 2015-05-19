@@ -61,7 +61,7 @@ public abstract class PluginManager {
     public abstract PluginPackageInfo getPluginPackageInfo(String packageName);
 
     public String loadAPkTest(){
-        String apkPath = Environment.getExternalStorageDirectory() + "/app-debug.apk";
+        String apkPath = Environment.getExternalStorageDirectory() + "/sample_child-debug.apk";
         return loadAPk(apkPath);
     }
 
@@ -202,8 +202,15 @@ public abstract class PluginManager {
 
 
                 DexClassLoader loader = createDexClassLoader(apkPath);
-                AssetManager assetManagerForPlugin = new AssetManager();
-                assetManagerForPlugin.addAssetPath(apkPath);
+                AssetManager assetManagerForPlugin /*= new AssetManager() //hide api*/;
+                /*assetManagerForPlugin.addAssetPath(apkPath); //hide api*/
+
+                assetManagerForPlugin = AssetManager.class.getDeclaredConstructor().newInstance();
+                assetManagerForPlugin
+                        .getClass()
+                        .getDeclaredMethod("addAssetPath", String.class)
+                        .invoke(assetManagerForPlugin, apkPath)
+                ;
 
                 Resources appResource = mAppContext.getResources();
                 Resources resourceForPlugin = new Resources(assetManagerForPlugin,

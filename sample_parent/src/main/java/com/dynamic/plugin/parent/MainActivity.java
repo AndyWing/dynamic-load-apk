@@ -30,6 +30,7 @@ public class MainActivity extends Activity {
         assignViews();
 
         final PluginManager pm = PluginManager.getInstance(MainActivity.this);
+        // TODO change to your apk path
         final String pkg = pm.loadAPkTest();
 
         PluginHostCallbackManager.getInstance().registerPluginHostCallback(mPluginHostCallback);
